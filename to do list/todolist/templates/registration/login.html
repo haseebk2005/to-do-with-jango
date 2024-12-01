@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-box">
+
+            <!-- Displaying error messages -->
+            {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                <li class="message {{ message.tags }}">{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+
+            <h2>Login</h2>
+
+            <!-- Form starts here -->
+            <form method="post">
+                {% csrf_token %}
+
+                <!-- Display errors for the entire form -->
+                {% if form.non_field_errors %}
+                <div class="error">
+                    {{ form.non_field_errors }}
+                </div>
+                {% endif %}
+
+                <!-- Username field with errors -->
+                <div class="input-group">
+                    {{ form.username.label_tag }}
+                    {{ form.username }}
+                    {% if form.username.errors %}
+                    <div class="error">
+                        {{ form.username.errors }}
+                    </div>
+                    {% endif %}
+                </div>
+
+                <!-- Password field with errors -->
+                <div class="input-group">
+                    {{ form.password.label_tag }}
+                    {{ form.password }}
+                    {% if form.password.errors %}
+                    <div class="error">
+                        {{ form.password.errors }}
+                    </div>
+                    {% endif %}
+                </div>
+
+                <!-- Submit button -->
+                <button type="submit" class="auth-btn">Login</button>
+            </form>
+
+            <!-- Registration link -->
+            <p>Don't have an account? <a href="{% url 'register' %}">Register here</a></p>
+        </div>
+    </div>
+</body>
+</html>

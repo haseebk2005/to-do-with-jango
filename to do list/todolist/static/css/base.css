@@ -1,0 +1,135 @@
+/* Base Styles */
+body {
+    background-color: #121212; /* Dark background */
+    color: #E0E0E0; /* Light gray text */
+    font-family: 'Arial', sans-serif; /* Font family */
+    line-height: 1.6; /* Line height for readability */
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Space between logo and nav links */
+    align-items: center; /* Center items vertically */
+    background-color: #1E1E1E; /* Dark background for navbar */
+    padding: 10px 20px; /* Padding for navbar */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+}
+
+.logo {
+    font-size: 24px; /* Logo font size */
+    color: #FFD700; /* Gold color for logo */
+}
+
+.context {
+    display: flex;
+    align-items: center; /* Center nav links and hamburger vertically */
+}
+
+.nav-links {
+    display: flex; /* Flexbox for horizontal layout */
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+    margin: 0; /* Remove default margin */
+}
+
+.nav-links li {
+    margin: 0 15px; /* Space between links */
+}
+
+.nav-links a {
+    color: #1E90FF; /* Bright blue for links */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth transition on hover */
+}
+
+.nav-links a:hover {
+    color: #87CEEB; /* Lighter blue on hover */
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none; /* Hidden by default */
+    flex-direction: column; /* Stack bars vertically */
+}
+
+.bar {
+    background-color: #1E90FF; /* Color for bars */
+    height: 3px; /* Height of bars */
+    width: 25px; /* Width of bars */
+    margin: 4px 0; /* Space between bars */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.hamburger:hover .bar {
+    background-color: #87CEEB; /* Lighter blue on hover */
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #1E1E1E; /* Dark footer background */
+    color: #B0B0B0; /* Light gray text */
+    text-align: center; /* Centered text */
+    padding: 20px;
+    position: relative; /* For positioning */
+    bottom: 0;
+    width: 97.05%; /* Full width */
+}
+
+.footer-links {
+    display: flex; /* Flexbox for horizontal layout */
+    justify-content: center; /* Center links */
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+}
+
+.footer-links a {
+    color: #1E90FF; /* Bright blue for footer links */
+    text-decoration: none; /* Remove underline */
+    margin: 0 10px; /* Space between links */
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+.footer-links a:hover {
+    color: #87CEEB; /* Lighter blue on hover */
+}
+
+/* Quote Styles */
+.quote {
+    margin-top: 10px; /* Space above quote */
+    font-style: italic; /* Italic text for quote */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide links by default */
+    }
+
+    .hamburger {
+        display: flex; /* Show hamburger menu */
+    }
+
+    .navbar {
+        justify-content: space-between; /* Space between items */
+    }
+
+    /* Show nav links when hamburger is clicked */
+    .nav-active .nav-links {
+        display: flex; /* Show links */
+        flex-direction: column; /* Stack links vertically */
+        position: absolute; /* Absolute positioning */
+        top: 60px; /* Position below navbar */
+        right: 0; /* Align to right */
+        background-color: #1E1E1E; /* Match navbar background */
+        padding: 10px; /* Padding */
+        width: 100%; /* Full width */
+        z-index: 100; /* Above other content */
+    }
+
+    .nav-active .hamburger {
+        display: none; /* Hide hamburger when active */
+    }
+}

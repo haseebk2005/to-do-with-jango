@@ -1,0 +1,103 @@
+/* Task List Section Styles */
+.task-list {
+    padding: 20px; /* Padding around task list */
+    background-color: #1E1E1E; /* Dark background for task list section */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+    margin-bottom: 30px; /* Space below task list */
+}
+
+/* Section Header Styles */
+.task-list h2 {
+    color: #FFD700; /* Gold color for main section header */
+    margin-bottom: 10px; /* Space below header */
+}
+
+.task-list h3 {
+    color: #FFD700; /* Gold color for subheader */
+    margin: 15px 0; /* Space above and below subheader */
+}
+
+/* Task List Styles */
+#tasks {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+/* Individual Task Styles */
+.task {
+    display: flex; /* Flexbox for horizontal layout */
+    justify-content: space-between; /* Space between task label and delete button */
+    align-items: center; /* Center items vertically */
+    background-color: #333333; /* Dark background for tasks */
+    padding: 15px; /* Padding for each task */
+    margin: 10px 0; /* Space between tasks */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+.task:hover {
+    background-color: #444444; /* Lighter gray on hover */
+}
+
+/* Task Label Styles */
+.task-label {
+    display: flex; /* Flexbox for task label */
+    align-items: center; /* Center items vertically */
+    width: 100%; /* Full width */
+}
+
+.task-counter {
+    margin-right: 10px; /* Space between counter and task name */
+    color: #FFD700; /* Gold color for task counter */
+}
+
+/* Task Name and Time Styles */
+.task-name {
+    flex: 1; /* Take available space */
+    color: #E0E0E0; /* Light gray for task name */
+}
+
+.task-time {
+    color: #A9A9A9; /* Dim gray for task time */
+    margin-right: 2%;
+}
+
+/* Delete Button Styles */
+.delete-task {
+    background-color: #C21807; /* Dark red background for delete button */
+    color: #FFFFFF; /* White text */
+    border: none; /* Remove border */
+    padding: 10px 15px; /* Padding for button */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.delete-task:hover {
+    background-color: #D32F2F; /* Lighter red on hover */
+}
+
+/* No Tasks Message Styles */
+.no-tasks {
+    color: #B0B0B0; /* Light gray for no tasks message */
+    text-align: center; /* Center the message */
+    padding: 20px; /* Padding around message */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .task-list {
+        padding: 15px; /* Reduce padding on smaller screens */
+    }
+
+    .task {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .task-label {
+        width: auto; /* Auto width for labels on smaller screens */
+    }
+}

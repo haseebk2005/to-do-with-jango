@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Navbar</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="{% static 'css/tasks.css' %}">
+</head>
+<body>
+    <div class="all">
+        <nav class="navbar">
+            <div class="logo">TO-DO LIST</div>
+            <div class="context">
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/urgent">Urgent</a></li>
+                <li><a href="/personal">Personal</a></li>
+                <li><a href="/work">Work</a></li>
+            </ul>
+            <div class="hamburger">
+                <div class="bar">Home</div>
+                <div class="bar">Urgent</div>
+                <div class="bar">Personal</div>
+                <div class="bar">Work</div>
+            </div>
+        </div>
+        </nav>
+        {% block base %}{% endblock %}
+        <!-- Footer Section -->
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; 2024 My To-Do List. All Rights Reserved.</p>
+                <div class="footer-links">
+                    <a href="/">FAQs</a>
+                    <a href="/">Support</a>
+                    <a href="/">Contact Us</a>
+                </div>
+                <p class="quote">"The secret of getting ahead is getting started." - Mark Twain</p>
+            </div>
+        </footer>
+    </div>
+</body>
+{% comment %} <script src="{% static 'js/nav.js' %}"></script> <!-- Your JavaScript --> {% endcomment %}
+</html>

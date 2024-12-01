@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% load static %}
+{% block base %}
+<!-- Main Content -->
+<main class="main-content">
+    <div class="container">
+        <!-- User Info Section -->
+        <section class="user-info">
+            {% if request.user.is_authenticated %}
+                <h2>Hello, {{ request.user.username }}!</h2>
+            {% else %}
+                <h2>Hello, Guest!</h2>
+            {% endif %}
+            
+            <p>Your active tasks: {{ task_count }}</p>
+            <a href="{% url 'logout' %}"><button class="logout-btn">Logout</button></a>
+        </section>
+
+        <!-- Nearest Upcoming Task Section -->
+        <section class="nearest-task">
+            <h2>Upcoming Task</h2>
+            {% if nearest_task %}
+                <div class="task-details">
+                    <p><strong>Task:</strong> {{ nearest_task.task }}</p>
+                    <p><strong>Type:</strong> {{ nearest_task.task_type }}</p>
+                    <p><strong>Due: </strong> {{ nearest_task.task_time|date:"Y-m-d H:i" }}</p>
+                </div>
+            {% else %}
+                <p>No upcoming tasks.</p>
+            {% endif %}
+        </section>
+
+        <!-- About Us Section -->
+        <section class="about-us">
+            <h2>About Us</h2>
+            <p>Our To-Do List App helps you manage your daily tasks effortlessly. Stay organized and accomplish your goals with ease. Whether it's personal or work-related tasks, our intuitive interface keeps everything in one place, making productivity fun!</p>
+        </section>
+        <div id="error-message" class="error-message" style="display: none;"></div>
+
+        <!-- Add New Task Form -->
+        <section class="task-input">
+            <h2>Add a New Task</h2>
+            <form id="task-form" method="post">
+                {% csrf_token %}
+                <input type="text" name="task" placeholder="Enter your task here..." required>
+                
+                <!-- Date input -->
+                <input class="task-date" type="date" name="task_date" required>
+
+                <!-- Time input -->
+                <input class="task-time" type="time" name="task_time" required>
+
+                <br>
+                
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="task_type" class="radio-b" value="personal" required> Personal
+                    </label>
+                    <label>
+                        <input type="radio" name="task_type" class="radio-b" value="work" required> Work
+                    </label>
+                    <label>
+                        <input type="radio" name="task_type" class="radio-b" value="urgent" required> Urgent
+                    </label>
+                </div>
+        
+                <button type="submit">Add Task</button>
+            </form>
+        </section>
+    </div>
+</main>
+
+<script src="{% static 'js/script.js' %}"></script>
+
+{% endblock %}

@@ -1,0 +1,110 @@
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif; /* Font family for the body */
+    background: linear-gradient(180deg, #000000, #FFD700); /* Linear gradient background */
+    color: #E0E0E0; /* Light text color for contrast */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+}
+
+/* Authentication Container */
+.auth-container {
+    width: 100%; /* Full width */
+    max-width: 400px; /* Maximum width for the login box */
+    padding: 20px; /* Padding around the container */
+    background-color: #1E1E1E; /* Dark background for the login box */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+    box-sizing: border-box; /* Include padding in width calculations */
+}
+
+/* Header Styles */
+.auth-box h2 {
+    color: #FFD700; /* Gold color for the header */
+    text-align: center; /* Center the header text */
+    margin-bottom: 20px; /* Space below header */
+}
+
+/* Input Group Styles */
+.input-group {
+    margin-bottom: 15px; /* Space between input groups */
+}
+
+/* Label Styles */
+.input-group label {
+    display: block; /* Block display for labels */
+    margin-bottom: 5px; /* Space below labels */
+    color: #E0E0E0; /* Light text color */
+}
+
+/* Input Field Styles */
+input[type="text"],
+input[type="password"] {
+    width: 100%; /* Full width */
+    padding: 10px; /* Padding inside inputs */
+    background-color: #333333; /* Dark background for inputs */
+    color: #E0E0E0; /* Light text color */
+    border: 1px solid #444444; /* Dark border */
+    border-radius: 5px; /* Rounded corners */
+    transition: border-color 0.3s ease; /* Smooth transition */
+    box-sizing: border-box; /* Include padding in width calculations */
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #FFD700; /* Gold border on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Error Message Styles */
+.error {
+    color: #FF4500; /* Orange color for error messages */
+    margin-top: 5px; /* Space above error messages */
+}
+
+/* Button Styles */
+.auth-btn {
+    width: 100%; /* Full width */
+    background-color: #1E90FF; /* Bright blue background */
+    color: #FFFFFF; /* White text */
+    border: none; /* Remove border */
+    padding: 10px; /* Padding for button */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.auth-btn:hover {
+    background-color: #87CEEB; /* Lighter blue on hover */
+}
+
+/* Messages List Styles */
+.messages {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 0 0 15px 0; /* Space below messages */
+}
+
+/* Individual Message Styles */
+.message {
+    padding: 10px; /* Padding for message */
+    margin-bottom: 5px; /* Space between messages */
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 400px) {
+    .auth-container {
+        padding: 15px; /* Reduce padding on smaller screens */
+    }
+}
+a{
+    color: #FFD700;
+}
+p{
+    color: #f6f5f4;
+}

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+{% block base %}
+<!-- Task List Section -->
+<section class="task-list">
+    <h2>Your To-Do List</h2>
+    <h3>Work</h3>
+    <ul id="tasks">
+        {% for task in tasks %}
+        <li class="task">
+            <label class="task-label">
+                <span class="task-counter">{{ forloop.counter }}</span> <!-- Task counter -->
+                <span class="task-name">{{ task.task }}</span> <!-- Display the task name -->
+                <span class="task-time">{{ task.task_time|date:"Y-m-d H:i" }}</span> <!-- Display the task date and time -->
+            </label>
+            <form action="{% url 'delete_task' task.id %}" method="post" style="display:inline;">
+                {% csrf_token %}
+                <button type="submit" class="delete-task">Delete</button>
+            </form>
+        </li>
+        {% empty %}
+        <li class="no-tasks">No work tasks available.</li>
+        {% endfor %}
+    </ul>
+</section>
+{% endblock %}

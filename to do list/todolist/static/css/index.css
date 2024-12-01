@@ -1,0 +1,152 @@
+/* Main Content Styles */
+.main-content {
+    padding: 20px; /* Padding around the main content */
+}
+
+/* Container Styles */
+.container {
+    max-width: 1200px; /* Maximum width for the container */
+    margin: 0 auto; /* Center container */
+    padding: 20px; /* Padding inside container */
+    background-color: #1E1E1E; /* Dark background for main content */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+}
+
+/* User Info Section */
+.user-info {
+    margin-bottom: 30px; /* Space below user info */
+}
+
+.user-info h2 {
+    color: #FFD700; /* Gold color for greeting */
+}
+
+/* Logout Button */
+.logout-btn {
+    background-color: #333333; /* Dark button background */
+    color: #E0E0E0; /* Light button text */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Padding for button */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.logout-btn a {
+    color: inherit; /* Inherit color from button */
+    text-decoration: none; /* Remove underline */
+}
+
+.logout-btn:hover {
+    background-color: #1E90FF; /* Lighter gray on hover */
+}
+
+/* Nearest Task Section */
+.nearest-task {
+    margin-bottom: 30px; /* Space below nearest task section */
+}
+
+.nearest-task h2 {
+    color: #FFD700; /* Gold color for section header */
+}
+
+.task-details {
+    background-color: #333333; /* Dark background for task details */
+    padding: 15px; /* Padding inside task details */
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* About Us Section */
+.about-us {
+    margin-bottom: 30px; /* Space below about us section */
+}
+
+.about-us h2 {
+    color: #FFD700; /* Gold color for section header */
+}
+
+/* Error Message */
+.error-message {
+    color: #FF4500; /* Orange color for error messages */
+    background-color: #222222; /* Dark background for error messages */
+    padding: 10px; /* Padding for error messages */
+    border-radius: 5px; /* Rounded corners */
+    display: none; /* Initially hidden */
+}
+
+/* Task Input Section */
+.task-input {
+    margin-bottom: 30px; /* Space below task input section */
+}
+
+.task-input h2 {
+    color: #FFD700; /* Gold color for section header */
+}
+
+.task-input form {
+    display: flex;
+    flex-direction: column; /* Stack form elements vertically */
+}
+
+input[type="text"],
+input[type="date"],
+input[type="time"] {
+    background-color: #1E1E1E; /* Dark input background */
+    color: #E0E0E0; /* Light text */
+    border: 1px solid #444444; /* Dark border */
+    padding: 10px; /* Padding inside inputs */
+    border-radius: 5px; /* Rounded corners */
+    margin-bottom: 10px; /* Space between inputs */
+    width: 97%; /* Full width */
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="time"]:focus {
+    border-color: #1E90FF; /* Bright border on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Radio Button Styles */
+.radio {
+    margin-bottom: 20px; /* Space below radio buttons */
+}
+
+.radio label {
+    color: #E0E0E0; /* Light text for labels */
+    margin-right: 15px; /* Space between radio buttons */
+}
+
+/* Add Task Button */
+.task-input button {
+    background-color: #1E90FF; /* Bright blue background */
+    color: #FFFFFF; /* White text */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Padding for button */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.task-input button:hover {
+    background-color: #aac72d; /* Lighter blue on hover */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px; /* Reduce padding on smaller screens */
+    }
+
+    .logout-btn,
+    .task-input button {
+        width: 100%; /* Full width for buttons on small screens */
+    }
+
+    input[type="text"],
+    input[type="date"],
+    input[type="time"] {
+        width: 100%; /* Full width for inputs on small screens */
+    }
+}
